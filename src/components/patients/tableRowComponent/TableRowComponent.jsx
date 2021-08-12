@@ -1,4 +1,6 @@
 import React from 'react';
+import PatientModal from '../../modal/ModalPatientComponent';
+
 import {
   TableCellElement,
   TableRowElement,
@@ -23,7 +25,9 @@ export function TableRowComponent({ user }) {
       </TableCellElement>
       <TableCellElement align='center'>{`${user.gender}`}</TableCellElement>
       <TableCellElement align='center'>{`${user.nat}`}</TableCellElement>
-      <TableCellElement align='center'>Actions</TableCellElement>
+      <TableCellElement align='center'>
+        <PatientModal user={user} />
+      </TableCellElement>
     </TableRowElement>
   );
 }
