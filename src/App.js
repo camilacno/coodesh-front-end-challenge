@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Topbar from './components/topbar/Topbar';
+import Home from './pages/home/Home';
 import { globalStyles } from './assets/styles/global.style.js';
+import Header from './components/topbar/Topbar';
 
 function App() {
   const classes = globalStyles();
 
   return (
     <>
-      <Topbar />
+      <Header />
       <div className={classes.appContainer}>
         <BrowserRouter>
           <Switch>

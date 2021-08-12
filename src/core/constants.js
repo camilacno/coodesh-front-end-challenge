@@ -25,10 +25,14 @@ export const NATIONALITIES = [
 ];
 
 export const COLORS = {
-  headerTable: '#0477BF',
   backgroundTable: '#dbf5ff',
+  buttonHover: '#0BC4D9',
+  headerTable: '#0477BF',
+  text: '#666',
 };
 
 export const FONT_SIZES = {
+  text: 14,
+  title: 16,
   logo: 30,
 };

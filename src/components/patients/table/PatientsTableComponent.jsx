@@ -107,7 +107,7 @@ export default function PatientsTable() {
   };
 
   function handleFilters({ target }) {
-    if (target.name === 'male' || 'Gender') {
+    if (target.name === 'Gender') {
       if (target.value !== filteredGender) {
         setResetQuery(true);
       }
@@ -209,7 +209,4 @@ export default function PatientsTable() {
       </TableContainer>
     </>
   );
-}
-
-{
 }
