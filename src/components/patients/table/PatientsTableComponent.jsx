@@ -7,6 +7,7 @@ import {
   TableRow,
   Paper,
 } from '@material-ui/core';
+import LoopIcon from '@material-ui/icons/Loop';
 
 import api from '../../../services/api';
 import { API_URI, NATIONALITIES, GENDER } from '../../../core/constants';
@@ -194,6 +195,15 @@ export default function PatientsTable() {
             {filteredUsers().map((item, index) => (
               <TableRowComponent key={index} user={item} />
             ))}
+            {loading && (
+              <tr>
+                <td align='center' colSpan='4'>
+                  <div className={classes.loading}>
+                    <LoopIcon fontSize='medium' /> Loading...
+                  </div>
+                </td>
+              </tr>
+            )}
           </TableBody>
         </Table>
       </TableContainer>

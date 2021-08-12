@@ -13,7 +13,7 @@ export const TableCellElement = withStyles((theme) => ({
   },
 }))(TableCell);
 
-export const TableRowElement = withStyles(() => ({
+export const TableRowElement = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
       backgroundColor: COLORS.backgroundTable,
@@ -21,17 +21,15 @@ export const TableRowElement = withStyles(() => ({
   },
 }))(TableRow);
 
-export const basicStyles = makeStyles({
+export const tableRowStyles = makeStyles((theme) => ({
   container: {
+    alignItems: 'center',
+    display: 'flex',
     heigth: '100%',
     width: '60%',
-    display: 'flex',
-    alignItems: 'center',
   },
-  head: {},
-  table: {},
   cell: {
-    backgroundColor: COLORS.backgroundTable,
+    backgroundColor: COLORS.headerTable,
   },
   avatar: {
     borderRadius: '50%',
@@ -44,4 +42,16 @@ export const basicStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+  patientDetailsButton: {
+    fontSize: FONT_SIZES.text,
+    padding: theme.spacing(0.5, 1),
+    '&.MuiButton-root': {
+      borderRadius: 5,
+      backgroundColor: COLORS.headerTable,
+      color: '#FFF',
+      '&:hover': {
+        backgroundColor: COLORS.buttonHover,
+      },
+    },
+  },
+}));

@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
-import { FONT_SIZES, COLORS } from '../../core/constants';
+import { FONT_SIZES, COLORS } from '../../../core/constants';
 
-export const useStyles = makeStyles((theme) => ({
+export const modalPatientStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.paper,
     borderRadius: 5,
@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2, 4, 3),
     position: 'relative',
     top: '10%',
-    width: 400,
+    width: 500,
   },
   infoContainer: {
     alignItems: 'center',
@@ -28,6 +28,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   info: {
     fontSize: FONT_SIZES.text,
+    marginLeft: '3px',
   },
   infoTitle: {
     fontSize: FONT_SIZES.title,

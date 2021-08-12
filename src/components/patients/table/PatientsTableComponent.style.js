@@ -55,4 +55,13 @@ export const patientTableStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     marginRight: '10px',
   },
+  loading: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: COLORS.text,
+    fontSize: FONT_SIZES.title,
+    fontWeight: 'bold',
+    margin: '5px 0',
+  },
 }));
