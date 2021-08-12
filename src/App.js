@@ -1,10 +1,19 @@
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Topbar from './components/topbar/Topbar';
 
 function App() {
   return (
-    <div>
-      <h1>Pharma Inc</h1>
-    </div>
+    <>
+      <Topbar />
+
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' exact component={Home} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 
