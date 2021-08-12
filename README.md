@@ -21,10 +21,6 @@ Dashboard for the Pharma Inc company, in collaboration with its customer base, t
 - Loading more
 - Patient details
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 ## Run Locally
 
 #### Requirements
