@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PatientsTable from '../components/patients/table/PatientsTableComponent';
+
 function Home() {
   return (
     <div>
@@ -9,6 +11,7 @@ function Home() {
         patients, in a simple and objective way. Using this feature you can
         list, filter and expand the available data.
       </p>
+      <PatientsTable />
     </div>
   );
 }
