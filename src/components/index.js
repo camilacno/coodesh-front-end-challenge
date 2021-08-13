@@ -1,1 +1,2 @@
-export * from '../components/patients/tableRowComponent/TableRowComponent';
+export * from './patients';
+export * from './topbar/Topbar';

@@ -15,12 +15,6 @@ export const patientTableStyles = makeStyles((theme) => ({
   cell: {
     backgroundColor: COLORS.headerTable,
   },
-  avatar: {
-    borderRadius: '50%',
-    height: '10%',
-    marginRight: '10px',
-    width: '10%',
-  },
   customer: {
     alignItems: 'center',
     display: 'flex',
@@ -34,6 +28,16 @@ export const patientTableStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     margin: '10px 0',
     padding: '10px 5px',
+  },
+  inputSearch: {
+    borderColor: COLORS.text,
+    borderRadius: 3,
+    borderWidth: '1px',
+    color: COLORS.text,
+    fontSize: FONT_SIZES.text,
+    height: '32px',
+    padding: theme.spacing(0.5),
+    width: '300px',
   },
   filtersContainer: {
     alignItems: 'center',

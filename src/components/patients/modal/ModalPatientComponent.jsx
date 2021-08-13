@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { Modal, Button } from '@material-ui/core';
 
 import { PatientViewContext } from '../../../contexts/PatientViewContext';
-import { tableRowStyles } from '../../patients/tableRowComponent/TableRowComponent.style';
+import { tableRowStyles } from '../../patients/table/TableRowComponent.style';
 import { modalPatientStyles } from './ModalPatientComponent.style';
 
-export default function PatientModal() {
+export function PatientModal() {
   const classes = modalPatientStyles();
 
   const { patientModal, isModalVisible, toggleModalVisibility } =

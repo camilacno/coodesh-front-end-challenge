@@ -1,9 +1,8 @@
 import React from 'react';
 
-import PatientsTable from '../../components/patients/table/PatientsTableComponent';
+import { PatientsTable, PatientModal } from '../../components';
 import { globalStyles } from '../../assets/styles/global.style.js';
 import { PatientViewProvider } from '../../contexts/PatientViewContext';
-import PatientViewModal from '../../components/patients/modal/ModalPatientComponent';
 
 function Home() {
   const classes = globalStyles();
@@ -19,7 +18,7 @@ function Home() {
         </p>
 
         <PatientsTable />
-        <PatientViewModal />
+        <PatientModal />
       </div>
     </PatientViewProvider>
   );

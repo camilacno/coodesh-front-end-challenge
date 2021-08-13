@@ -1,7 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  makeStyles,
+  CssBaseline,
+} from '@material-ui/core';
 
 import { COLORS, FONT_SIZES } from '../../core/constants';
 import logo from '../../assets/images/logo.png';
@@ -34,7 +38,7 @@ const topBarStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export function Header() {
   const classes = topBarStyles();
 
   return (

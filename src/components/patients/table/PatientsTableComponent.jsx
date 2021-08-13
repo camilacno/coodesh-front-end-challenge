@@ -10,14 +10,14 @@ import {
 import LoopIcon from '@material-ui/icons/Loop';
 
 import api from '../../../services/api';
-import { API_URI, NATIONALITIES, GENDER } from '../../../core/constants';
-import { TableRowComponent } from '../../../components/patients/tableRowComponent/TableRowComponent';
+import { NATIONALITIES, GENDER } from '../../../core/constants';
+import { TableRowComponent } from '../../../components';
 import {
   StyledTableCell,
   patientTableStyles,
 } from './PatientsTableComponent.style';
 
-export default function PatientsTable() {
+export function PatientsTable() {
   const classes = patientTableStyles();
 
   const [users, setUsers] = useState([]);
@@ -32,14 +32,12 @@ export default function PatientsTable() {
   function fetchData() {
     if (!loading && !search.length) {
       setLoading(true);
-      let params = `&page=${page}`;
-      if (filteredGender.length) params = params + `&gender=${filteredGender}`;
-      if (filteredNationality.length)
-        params = params + `&nat=${filteredNationality}`;
+      const params = { page };
+      if (filteredGender.length) params['gender'] = filteredGender;
+      if (filteredNationality.length) params['nat'] = filteredNationality;
 
-      console.log('params ->', params);
       api
-        .get(`${API_URI}${params}`)
+        .get('', { params })
         .then(({ data }) => {
           const { results } = data;
           const listUsers = [...(resetQuery ? [] : users), ...results];
@@ -136,12 +134,12 @@ export default function PatientsTable() {
     <>
       <div className={classes.searchAndFilters}>
         <input
-          className={classes.inputAndSelect}
+          className={classes.inputSearch}
           name='Search'
           type='text'
           value={search}
           onChange={handleFilters}
-          placeholder=' Search...'
+          placeholder=' Search and filter in results bellow...'
         />
 
         <div className={classes.filtersContainer}>

@@ -33,9 +33,9 @@ export const tableRowStyles = makeStyles((theme) => ({
   },
   avatar: {
     borderRadius: '50%',
-    height: '10%',
-    width: '10%',
-    marginRight: '1rem',
+    height: '35px',
+    width: '35px',
+    marginRight: '16px',
   },
   customer: {
     display: 'flex',

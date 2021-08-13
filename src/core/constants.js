@@ -1,6 +1,6 @@
-const LIMIT = 50;
-const SEED = 'testcoodesh';
-export const API_URI = `https://randomuser.me/api/?&results=${LIMIT}`;
+export const LIMIT_RESULTS = 50;
+export const SEED = 'testcoodesh';
+export const API_URI = 'https://randomuser.me/api/';
 
 export const GENDER = ['male', 'female'];
 

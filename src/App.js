@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/home/Home';
 import { globalStyles } from './assets/styles/global.style.js';
-import Header from './components/topbar/Topbar';
+import { Header } from './components';
 
 function App() {
   const classes = globalStyles();
